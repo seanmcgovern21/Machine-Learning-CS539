@@ -1,4 +1,4 @@
-## <p style="text-align: center;"> Contributers </p>
+## <p style="text-align: center;"> Team Members </p>
 ### <p style="text-align: center;"> Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri </p>
  
 ## Introduction
