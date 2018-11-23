@@ -35,7 +35,8 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 <h2 align="center"> 
 Proposed Method
 </h2>
-![Figure 2: Weighted Classified Subnetwork for Regression](/images/sub-network classification.png)
+![Figure 2: Weighted Classified Subnetwork for Regression](https://github.com/seanmcgovern21/Machine-Learning-CS539/tree/master/Images/sub-network classification.png)
+
 Our proposed systems combine the knowledge from classification, which differentiate revenue and non-revenue generating customers, into the regression model. We believe this system will be more robust against skewed data. We first propose a simple straightforward system that runs a classifier before running the regression model i.e. Pre-classified Regression, and a more complex system that also handles sequential data i.e. Weighted Classified Subnetwork for Regression.
 Pre-classified Regression
 The first proposed idea is to apply a classification model before a linear regression model. The classification model is used to predict whether or not a customer will generate revenue. If the revenue is predicted as non-zero, the sample will not enter our regression model. By doing this, the large number of zero-revenue samples will not impact the training process of the regression model. For classification, we plan to perform Logistic Regression, Decision Tree, KNN and Support Vector Machine on the training set separately and choose the algorithm with the best performance. For regression, we plan to apply the models we mentioned in the state-of-the-art section. The Pre-classified Regression will be implemented using Scikit-learn in Python.
