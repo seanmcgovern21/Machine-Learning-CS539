@@ -1,5 +1,4 @@
-## A Joint-Classification-Regression Model for Predicting Spenders 
-## Machine Learning CS539 Project
+# Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri 
  
 
 You can use the [editor on GitHub](https://github.com/seanmcgovern21/ML_CS539/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
