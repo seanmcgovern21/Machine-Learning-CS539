@@ -1,9 +1,9 @@
 <p style="text-align: center;">   <b>Team Members </b></p>
 <p style="text-align: center;">   Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri </p>
 
-<p style="text-align: center;"><h2> 
+<h2 align="center"> 
 Introduction
-</h2></p>
+</h2>
 
 hi
 
