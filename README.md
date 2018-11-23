@@ -13,23 +13,28 @@ Business owners will obviously find this joint model useful to analyze customer 
 
 
 
-
-## Objective
+<h2 align="center"> 
+Objective
+</h2>
 
 We would like to implement machine learning systems that accurately predicts customer generated revenue. 
 
-
-## Challenge
+<h2 align="center"> 
+Challenge
+</h2>
 
 The dataset being used in very skewed. The data set also contains recursive data instances. 
 
-## State of the Art
+<h2 align="center"> 
+State of the Art
+</h2>
 
 Linear Regression is a classic state of the art algorithm for predicting real numerical target variables. However, linear regression will produce high bias, and not suitable for the dataset if the ground truth relationship in the dataset is non-linear. Polynomial  regression will solve these  issues, but may lead to overfitting.  
 	Decision Tree is also another usable state of the art algorithm for this task. Given that both categorical and numerical features are present in the dataset, the decision tree may be more suitable than Linear/Polynomial regression. Additionally, this algorithm also performs feature selection automatically. 
 
-
-## Proposed Method
+<h2 align="center"> 
+Proposed Method
+</h2>
 
 Our proposed systems combine the knowledge from classification, which differentiate revenue and non-revenue generating customers, into the regression model. We believe this system will be more robust against skewed data. We first propose a simple straightforward system that runs a classifier before running the regression model i.e. Pre-classified Regression, and a more complex system that also handles sequential data i.e. Weighted Classified Subnetwork for Regression.
 Pre-classified Regression
@@ -43,7 +48,9 @@ Figure 2: Weighted Classified Subnetwork for Regression
 
 
 
-## Evaluation
+<h2 align="center"> 
+Evaluation
+</h2>
 
 
 Performance of our proposed methods will be compared to the state-of-the-art methods (section 4.2.) using Root-Mean-Square Error (RMSE) which is defined as
@@ -53,8 +60,9 @@ yi=log(customer revenue+1),
 yi=log(predicted customer revenue+1).
 
 
-
-## Reference
+<h2 align="center"> 
+Reference
+</h2>
 
 Competition Website: https://www.kaggle.com/c/ga-customer-revenue-prediction/ 
 [1] Li, Yanghao et al. “Online Human Action Detection using Joint Classification-Regression Recurrent Neural Networks.” ECCV (2016). https://arxiv.org/abs/1604.05633
@@ -67,8 +75,10 @@ Competition Website: https://www.kaggle.com/c/ga-customer-revenue-prediction/
 
 
 
-
-### Acknowledgements
+<h2 align="center"> 
+Acknowledgements
+</h2>	
+	
 We would like to thank the Professor for providing a great course in Machine Learning and we are thankful for the opportunity to complete a challenging project together. 
 
 
