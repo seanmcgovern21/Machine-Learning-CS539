@@ -1,6 +1,7 @@
-# Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri 
+### <p style="text-align: center;"> Contributers </p>
+### <p style="text-align: center;"> Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri </p>
  
-### Introduction
+## Introduction
 
 The 'Google Analytics Customer Revenue Prediction'  is a Kaggle competition to predict the revenue generated per customer from data of the Google Merchandise Store (GStore). The data presents us with a skewed target variable, where only a small number of customer visits generate non-zero revenue. Some customers may also visit the GStore multiple times, which produces sequential data. State of the art algorithms such as linear regression and regression trees are insufficient for predicting skewed and sequential data. As such, we propose a joint classification-regression technique, which is more robust against skewed data. Recurrent Neural Networks (RNN) will be integrated into the proposed system to handle sequential data.
 Business owners will obviously find this joint model useful to analyze customer generated revenue. Furthermore, this model can be generalized to be used for any sequential data with skewed target variable. 
@@ -11,22 +12,22 @@ Business owners will obviously find this joint model useful to analyze customer 
 
 
 
-### Objective
+## Objective
 
 We would like to implement machine learning systems that accurately predicts customer generated revenue. 
 
 
-### Challenge
+## Challenge
 
 The dataset being used in very skewed. The data set also contains recursive data instances. 
 
-### State of the Art
+## State of the Art
 
 Linear Regression is a classic state of the art algorithm for predicting real numerical target variables. However, linear regression will produce high bias, and not suitable for the dataset if the ground truth relationship in the dataset is non-linear. Polynomial  regression will solve these  issues, but may lead to overfitting.  
 	Decision Tree is also another usable state of the art algorithm for this task. Given that both categorical and numerical features are present in the dataset, the decision tree may be more suitable than Linear/Polynomial regression. Additionally, this algorithm also performs feature selection automatically. 
 
 
-### Proposed Method
+## Proposed Method
 
 Our proposed systems combine the knowledge from classification, which differentiate revenue and non-revenue generating customers, into the regression model. We believe this system will be more robust against skewed data. We first propose a simple straightforward system that runs a classifier before running the regression model i.e. Pre-classified Regression, and a more complex system that also handles sequential data i.e. Weighted Classified Subnetwork for Regression.
 Pre-classified Regression
@@ -40,7 +41,7 @@ Figure 2: Weighted Classified Subnetwork for Regression
 
 
 
-### Evaluation
+## Evaluation
 
 
 Performance of our proposed methods will be compared to the state-of-the-art methods (section 4.2.) using Root-Mean-Square Error (RMSE) which is defined as
@@ -51,7 +52,7 @@ yi=log(predicted customer revenue+1).
 
 
 
-### Reference
+## Reference
 
 Competition Website: https://www.kaggle.com/c/ga-customer-revenue-prediction/ 
 [1] Li, Yanghao et al. “Online Human Action Detection using Joint Classification-Regression Recurrent Neural Networks.” ECCV (2016). https://arxiv.org/abs/1604.05633
