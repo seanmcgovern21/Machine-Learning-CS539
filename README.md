@@ -12,6 +12,8 @@ Business owners will obviously find this joint model useful to analyze customer 
 
 
 
+//Objective Paragraph /////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 <h2 align="center"> 
 Objective
@@ -31,6 +33,11 @@ State of the Art
 
 Linear Regression is a classic state of the art algorithm for predicting real numerical target variables. However, linear regression will produce high bias, and not suitable for the dataset if the ground truth relationship in the dataset is non-linear. Polynomial  regression will solve these  issues, but may lead to overfitting.  
 	Decision Tree is also another usable state of the art algorithm for this task. Given that both categorical and numerical features are present in the dataset, the decision tree may be more suitable than Linear/Polynomial regression. Additionally, this algorithm also performs feature selection automatically. 
+
+####Linear Regression
+
+'<https://github.com/seanmcgovern21/Machine-Learning-CS539/blob/master/gg_analytics-RNN.ipynb>'
+
 
 <h2 align="center"> 
 Proposed Method
