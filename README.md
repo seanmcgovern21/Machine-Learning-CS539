@@ -5,6 +5,8 @@
 Introduction
 </h2></p>
 
+hi
+
 The 'Google Analytics Customer Revenue Prediction'  is a Kaggle competition to predict the revenue generated per customer from data of the Google Merchandise Store (GStore). The data presents us with a skewed target variable, where only a small number of customer visits generate non-zero revenue. Some customers may also visit the GStore multiple times, which produces sequential data. State of the art algorithms such as linear regression and regression trees are insufficient for predicting skewed and sequential data. As such, we propose a joint classification-regression technique, which is more robust against skewed data. Recurrent Neural Networks (RNN) will be integrated into the proposed system to handle sequential data.
 Business owners will obviously find this joint model useful to analyze customer generated revenue. Furthermore, this model can be generalized to be used for any sequential data with skewed target variable. 
 
