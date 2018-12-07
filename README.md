@@ -67,8 +67,8 @@ Proposed Model - Weighted Classified Subnetwork for Regression
 Evaluation
 </h2>
 
-Performance of our proposed methods will be compared to the state-of-the-art methods (section 4.2.) using Root-Mean-Square Error (RMSE) which is defined as
-<img src="/images/RMSE.png">
+Performance of our proposed methods will be compared to the state-of-the-art methods using Root-Mean-Square Error (RMSE) which is defined as
+<img src="/images/RMSE.png" style="width:128px;height:128px;>
 
 
 <h2 align="center"> 
