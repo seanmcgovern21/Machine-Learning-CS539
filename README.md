@@ -31,8 +31,8 @@ The dataset being used in very skewed. The data set also contains recursive data
 Data
 </h2>
 
-<img src="/images/data_visit_based.png" width="600" height="auto">
-<img src="/images/data_customer_based.png" width="1000" height="auto">
+<img src="/images/data_visit_based.png" width="500" height="auto">
+<img src="/images/data_customer_based.png" width="500" height="auto">
 
 
 
@@ -51,7 +51,7 @@ State of the Art
 <h3 align="left"> 
 Proposed Model - Pre-classified Regression
 </h3>
-<img src="/images/Pre-classified Regression.png"  width="1000" height="auto">
+<img src="/images/Pre-classified Regression.png"  width="500" height="auto">
 
 
 <h2 align="center"> 
@@ -67,7 +67,7 @@ Recurrent neural network (RNN)
 Proposed Model - Weighted Classified Subnetwork for Regression
 </h3>
 This system contains 2 parts: the main-network and the sub-network. We applied RNN model in the main-network and the goal is to predict generated revenue from customers. This predicted revenue is weighted by the output from sub-network which is the probability of customer spending. In order to get the probability of customer spending, we again applied RNN model but we added sigmoid function in the last layer of the sub-network. The total loss of this proposed method is the sum of log_loss in sub-network and MSE_loss in main-network.
-<img src="/images/Weighted Classified  Subnetwork for Regression.png"  width="1000" height="auto">
+<img src="/images/Weighted Classified  Subnetwork for Regression.png"  width="500" height="auto">
 
 
 
@@ -77,7 +77,7 @@ Evaluation
 </h2>
 
 Performance of our proposed methods will be compared to the state-of-the-art methods using Root-Mean-Square Error (RMSE) which is defined as
-<img src="/images/RMSE.png" width="1000" height="auto">
+<img src="/images/RMSE.png" width="500" height="auto">
 
 
 <h2 align="center"> 
@@ -87,12 +87,12 @@ Results
 <h3 align="left"> 
 Visit-based Model
 </h3>
-<img src="/images/result_visit_based/result_summary_visit-based.png" width="1000" height="auto">
+<img src="/images/result_visit_based/result_summary_visit-based.png" width="500" height="auto">
 
 <h3 align="left"> 
 Customer-based Model
 </h3>
-<img src="/images/result_customer_based/result_summary_customer-based.png" width="1000" height="auto">
+<img src="/images/result_customer_based/result_summary_customer-based.png" width="500" height="auto">
 
 
 
