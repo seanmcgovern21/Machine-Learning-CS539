@@ -1,8 +1,12 @@
+<html>
+<head>
 <style>
 img { 
   width: 100%; 
 }
 </style>
+</head>
+<body>
 
 <p style="text-align: center;">   <b>Team Members </b></p>
 <p style="text-align: center;">   Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri </p>
