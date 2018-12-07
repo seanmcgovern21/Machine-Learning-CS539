@@ -2,30 +2,22 @@
 <p style="text-align: center;">   Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri </p>
 
 
-<!---//Introduction and Motivation Paragraph  //////////////////////////////////////////////////////////////////////////////////
+<!---//Motivation Paragraph  //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
 
-<h2 align="center">  Introduction / Motivationn </h2>
+<h2 align="center">  Motivation </h2>
 
-The 'Google Analytics Customer Revenue Prediction'  is a Kaggle competition to predict the revenue generated per customer from data of the Google Merchandise Store (GStore). The data presents us with a skewed target variable, where only a small number of customer visits generate non-zero revenue. Some customers may also visit the GStore multiple times, which produces sequential data. State of the art algorithms such as linear regression and regression trees are insufficient for predicting skewed and sequential data. As such, we propose a joint classification-regression technique, which is more robust against skewed data. Recurrent Neural Networks (RNN) will be integrated into the proposed system to handle sequential data.
+	The 'Google Analytics Customer Revenue Prediction'  is a Kaggle competition to predict the revenue generated per customer from data of the Google Merchandise Store (GStore). The data presents us with a skewed target variable, where only a small number of customer visits generate non-zero revenue. Some customers may also visit the GStore multiple times, which produces sequential data. State of the art algorithms such as linear regression and regression trees are insufficient for predicting skewed and sequential data. As such, we propose a joint classification-regression technique, which is more robust against skewed data. Recurrent Neural Networks (RNN) will be integrated into the proposed system to handle sequential data.
 Business owners will obviously find this joint model useful to analyze customer generated revenue. Furthermore, this model can be generalized to be used for any sequential data with skewed target variable. 
 
 
 
-
-
-<!---//Problem Statement Paragraph /////////////////////////////////////////////////////////////////////////////////////
+<!---//Problem Statement and Challenge Paragraph ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
 
-<h2 align="center"> Problem Statement </h2>
+<h2 align="center"> Problem Statement and Challenge </h2>
 
 We would like to implement machine learning systems that accurately predicts customer generated revenue. 
-
-
-<!---//Challenge Paragraph /////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
-
-<h2 align="center">  Challenge  </h2>
 
 The dataset being used in very skewed. The data set also contains recursive data instances. 
 
@@ -34,8 +26,8 @@ The dataset being used in very skewed. The data set also contains recursive data
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
 <h2 align="center">  Data  </h2>
 
-<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/data_visit_based.png" width="500" height="auto">
-<img src="/images/data_customer_based.png" width="500" height="auto">
+<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/data_visit_based.png" width="500" height="auto" align="center">
+<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/data_customer_based.png" width="500" height="auto" align="center">
 
 
 
