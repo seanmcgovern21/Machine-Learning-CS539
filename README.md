@@ -28,6 +28,73 @@ Challenge
 The dataset being used in very skewed. The data set also contains recursive data instances. 
 
 <h2 align="center"> 
+Data
+</h2>
+
+
+<h2 align="center"> 
+Visit-based Model
+</h2>
+
+<h3 align="left"> 
+State of the Art
+</h3>
+
+Linear Regression is a classic state of the art algorithm for predicting real numerical target variables. However, linear regression will produce high bias, and not suitable for the dataset if the ground truth relationship in the dataset is non-linear. Polynomial  regression will solve these  issues, but may lead to overfitting.  
+Decision Tree is also another usable state of the art algorithm for this task. Given that both categorical and numerical features are present in the dataset, the decision tree may be more suitable than Linear/Polynomial regression. Additionally, this algorithm also performs feature selection automatically. 
+
+<h3 align="left"> 
+Proposed Model - Pre-classified Regression
+</h3>
+
+
+<h2 align="center"> 
+Customer-based Model
+</h2>
+
+<h3 align="left"> 
+State of the Art
+</h3>
+
+<h3 align="left"> 
+Proposed Model - Weighted Classified Subnetwork for Regression
+</h3>
+
+
+
+
+<h2 align="center"> 
+Evaluation
+</h2>
+
+Performance of our proposed methods will be compared to the state-of-the-art methods (section 4.2.) using Root-Mean-Square Error (RMSE) which is defined as
+
+
+<h2 align="center"> 
+Results
+</h2>
+
+<h3 align="left"> 
+Visit-based Model
+</h3>
+
+<h3 align="left"> 
+Customer-based Model
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 align="center"> 
 State of the Art
 </h2>
 
