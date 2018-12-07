@@ -34,7 +34,7 @@ The dataset being used in very skewed. The data set also contains recursive data
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
 <h2 align="center">  Data  </h2>
 
-<img src="/images/data_visit_based.png" width="500" height="auto">
+<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/data_visit_based.png" width="500" height="auto">
 <img src="/images/data_customer_based.png" width="500" height="auto">
 
 
