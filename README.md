@@ -1,3 +1,9 @@
+<style>
+img { 
+  width: 100%; 
+}
+</style>
+
 <p style="text-align: center;">   <b>Team Members </b></p>
 <p style="text-align: center;">   Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri </p>
 
@@ -31,7 +37,7 @@ The dataset being used in very skewed. The data set also contains recursive data
 Data
 </h2>
 
-<img src="/images/data_visit_based.png" width="250" height="250">
+<img src="/images/data_visit_based.png" style="width:30px;height:30px;">
 <img src="/images/data_customer_based.png" style="width:30px;height:30px;">
 
 
