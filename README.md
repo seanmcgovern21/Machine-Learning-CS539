@@ -31,7 +31,7 @@ The dataset being used in very skewed. The data set also contains recursive data
 Data
 </h2>
 
-<img src="/images/data_visit_based.png" width="1000" height="auto">
+<img src="/images/data_visit_based.png" width="600" height="auto">
 <img src="/images/data_customer_based.png" width="1000" height="auto">
 
 
