@@ -40,12 +40,13 @@ Visit-based Model
 State of the Art
 </h3>
 
-Linear Regression is a classic state of the art algorithm for predicting real numerical target variables. However, linear regression will produce high bias, and not suitable for the dataset if the ground truth relationship in the dataset is non-linear. Polynomial  regression will solve these  issues, but may lead to overfitting.  
-Decision Tree is also another usable state of the art algorithm for this task. Given that both categorical and numerical features are present in the dataset, the decision tree may be more suitable than Linear/Polynomial regression. Additionally, this algorithm also performs feature selection automatically. 
+- Linear/Polynomial Regression   
+- Regression Tree
 
 <h3 align="left"> 
 Proposed Model - Pre-classified Regression
 </h3>
+<img src="/images/Pre-classified Regression.png" style="width:50px;height:50px;">
 
 
 <h2 align="center"> 
@@ -55,10 +56,13 @@ Customer-based Model
 <h3 align="left"> 
 State of the Art
 </h3>
+Recurrent neural network (RNN)
 
 <h3 align="left"> 
 Proposed Model - Weighted Classified Subnetwork for Regression
 </h3>
+This system contains 2 parts: the main-network and the sub-network. We applied RNN model in the main-network and the goal is to predict generated revenue from customers. This predicted revenue is weighted by the output from sub-network which is the probability of customer spending. In order to get the probability of customer spending, we again applied RNN model but we added sigmoid function in the last layer of the sub-network. The total loss of this proposed method is the sum of log_loss in sub-network and MSE_loss in main-network.
+<img src="/images/Weighted Classified  Subnetwork for Regression.png" style="width:50px;height:50px;">
 
 
 
@@ -78,11 +82,12 @@ Results
 <h3 align="left"> 
 Visit-based Model
 </h3>
+<img src="/images/result_visit_based/result_summary_visit-based.png" style="width:50px;height:50px;">
 
 <h3 align="left"> 
 Customer-based Model
 </h3>
-
+<img src="/images/result_customer_based/result_summary_customer-based.png" style="width:50px;height:50px;">
 
 
 
