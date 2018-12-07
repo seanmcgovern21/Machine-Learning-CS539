@@ -68,7 +68,7 @@ Evaluation
 </h2>
 
 Performance of our proposed methods will be compared to the state-of-the-art methods (section 4.2.) using Root-Mean-Square Error (RMSE) which is defined as
-<img src="../images/RMSE.png">
+<img src="/images/RMSE.png">
 
 
 <h2 align="center"> 
