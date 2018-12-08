@@ -65,6 +65,9 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 
 
 <div style="height:210px;width:850px;overflow:auto;">
+<pre class="brush: python">
+   # python code here
+
 
 ```python
 from sklearn.pipeline import Pipeline
@@ -110,6 +113,8 @@ print('train_rmse_5fold', np.mean(train_rmse))
 print('val_mse_5fold', np.mean(val_mse))
 print('val_rmse_5fold', np.mean(val_rmse))
 ```
+
+</pre>
 </div>
 
 <h3>Regression Tree</h3>
