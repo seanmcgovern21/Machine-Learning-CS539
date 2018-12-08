@@ -851,12 +851,15 @@ print('val_rmse_5fold', np.mean(cv_val_rmse))
 <!---//Results: Visit Based Model /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
 <h1 align="center"> Results: Visit Based Model </h1>
-<h2 align="center"> Evaluation </h2>
+<h2 align="left"> Evaluation </h2>
 Performance of our proposed methods will be compared to the state-of-the-art methods using Root-Mean-Square Error (RMSE) which is defined as:
 <p align="center">
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/RMSE.png" width="500" height="auto">
 </p>
-<h2 align="center"> Results</h2>
+<h2 align="left"> Results</h2>
+
+For results of the visit based model, we show the rmse using 5 fold cross-validation. We use the rmse results from linear regression, polynomial regression and regression tree to compare our model results (these are shown in blue). We compare two variations of our model, one using random forest and one using decision tree, with each baseline. Our results, (shown in grey and orange) show there is a slight improvement to each baseline when using classification with each baseline. 
+
 <p align="center">
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/result_visit_based/result_summary_visit-based.png" width="850" height="auto">
 </p>
@@ -867,7 +870,7 @@ Performance of our proposed methods will be compared to the state-of-the-art met
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
 <h1 align="center"> Results: Customer Based Model </h1>
 
-<h2 align="center"> Evaluation </h2>
+<h2 align="left"> Evaluation </h2>
 
 Performance of our proposed methods will be compared to the state-of-the-art methods (section 4.2.) using Root-Mean-Square Error (RMSE) which is defined as
 RMSE = 1ni=1n(yi-yi)2
@@ -875,7 +878,9 @@ where 	nis the number of customers,
 yi=log(customer revenue+1),
 yi=log(predicted customer revenue+1).
 
-<h2 align="center"> Results </h2>
+<h2 align="left"> Results </h2>
+For the results of the customer based model, we also show the rmse using 5 fold cross validation. We compare our results to a Recurrent Neural Network baseline. The right graph shows the different hyperparameters used and their results. The hyperparameters for our proposed method that remembered up to 6 visits, 1 hidden or 2 hidden layers, and 6 hidden units showed the best results. With these hyperparameters, were able to provide a slight improvement to the baseline.  
+Based on the results, we can conclude combining classification and regression can improve the performance of visit based and customer based models with skewed data. 
 
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/result_customer_based/result_summary_customer-based.png" width="850" height="auto">
 
