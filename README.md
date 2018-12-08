@@ -56,6 +56,10 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 
 <div style="height:210px;width:1020px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
 	
+	<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/linearRegressionCode.png	" width="1000" height="auto">
+
+
+	
 	sdfasd
 	asdfasdf
 	adsfasdfa
