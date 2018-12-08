@@ -62,7 +62,7 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 	asdfasdf
 	asdfasdf
 	asdfasdf
-</div>
+
 	
 ```python
 
@@ -107,6 +107,10 @@ print('val_mse_5fold', np.mean(val_mse))
 print('val_rmse_5fold', np.mean(val_rmse))
 
 ```
+
+</div>
+
+
 <h3>Polynomial Regression </h3>
 
 
