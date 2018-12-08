@@ -54,7 +54,7 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 
 <h3>Linear Regression </h3>
 
-<div style="height:120px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+<div style="height:30px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
 	
 	sdfasd
 	asdfasdf
