@@ -42,10 +42,10 @@ The dataset being used in very skewed. The data set also contains recursive data
 Linear Regression is a classic state of the art algorithm for predicting real numerical target variables. However, linear regression will produce high bias, and not suitable for the dataset if the ground truth relationship in the dataset is non-linear. Polynomial  regression will solve these  issues, but may lead to overfitting. Decision Tree is also another usable state of the art algorithm for this task. Given that both categorical and numerical features are present in the dataset, the decision tree may be more suitable than Linear/Polynomial regression. Additionally, this algorithm also performs feature selection automatically. 
 
 <h3>Linear Regression </h3>
-'''python
+
+```python
 from sklearn.metrics import mean_squared_error
 from sklearn.linear_model import LinearRegression
-
 train_mse = []
 train_rmse = []
 val_mse = []
@@ -83,7 +83,7 @@ print('train_mse_5fold', np.mean(train_mse))
 print('train_rmse_5fold', np.mean(train_rmse))
 print('val_mse_5fold', np.mean(val_mse))
 print('val_rmse_5fold', np.mean(val_rmse))
-'''
+```
 
 
 '<https://github.com/seanmcgovern21/Machine-Learning-CS539/blob/master/gg_analytics-RNN.ipynb>'
