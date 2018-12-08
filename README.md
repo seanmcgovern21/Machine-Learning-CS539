@@ -54,63 +54,9 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 
 <h3>Linear Regression </h3>
 
-<div style="height:210px;width:1020px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+<div style="height:210px;width:800px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
 	
-	<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/linearRegressionCode.png	" width="1000" height="auto">
-
-
-	
-	sdfasd
-	asdfasdf
-	adsfasdfa
-	asdfasdf
-	asdfasdf
-	asdfasdf
-
-	
-```python
-
-from sklearn.metrics import mean_squared_error
-from sklearn.linear_model import LinearRegression
-train_mse = []
-train_rmse = []
-val_mse = []
-val_rmse = []
-
-for i in range(fold):
-    print('\n\nfold:', i)
-    val = processed_train_df[processed_train_df['fullVisitorId'].isin(id_cv[i])]
-    train = processed_train_df[~processed_train_df['fullVisitorId'].isin(id_cv[i])]
-    x_tr = train.iloc[:,2:]
-    y_tr = train.iloc[:,1]
-    log_y_tr = np.log1p(y_tr)
-    x_val = val.iloc[:,2:]
-    y_val = val.iloc[:,1]
-    log_y_val = np.log1p(y_val)
-    
-    # --- INSERT YOUR MODEL -----
-    model = LinearRegression().fit(x_tr, log_y_tr)
-    log_y_tr_pred = model.predict(x_tr)
-    # ---------------------------
-    
-    log_y_tr_pred = [0 if i < 0 else i for i in log_y_tr_pred]
-    log_y_val_pred = model.predict(x_val)
-    log_y_val_pred = [0 if i < 0 else i for i in log_y_val_pred]
-    
-    mse_tr, mse_val = getMse(x_tr, train, val, log_y_tr_pred, log_y_val_pred)
-    train_mse.append(mse_tr)
-    train_rmse.append(np.sqrt(mse_tr))
-    val_mse.append(mse_val)
-    val_rmse.append(np.sqrt(mse_val))
-
-
-print('\n\nAverage:')
-print('train_mse_5fold', np.mean(train_mse))
-print('train_rmse_5fold', np.mean(train_rmse))
-print('val_mse_5fold', np.mean(val_mse))
-print('val_rmse_5fold', np.mean(val_rmse))
-
-```
+<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/linearRegressionCode.png	" width="800" height="auto">
 
 </div>
 
