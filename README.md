@@ -1,7 +1,7 @@
 <style>
 div.ex1 {
-    background-color: grey;
-    width: 710px;
+    background-color: lightgrey;
+    width: 1010px;
     height: 210px;
     overflow: scroll;
 }
