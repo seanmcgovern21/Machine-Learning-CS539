@@ -1,6 +1,6 @@
 <style>
 div.ex1 {
-    background-color: lightgrey;
+    background-color: rgb(240, 240, 240);
     width: 1010px;
     height: 210px;
     overflow: scroll;
@@ -57,6 +57,7 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 <div class="ex1">
 	
 ```python
+
 from sklearn.metrics import mean_squared_error
 from sklearn.linear_model import LinearRegression
 train_mse = []
@@ -96,6 +97,7 @@ print('train_mse_5fold', np.mean(train_mse))
 print('train_rmse_5fold', np.mean(train_rmse))
 print('val_mse_5fold', np.mean(val_mse))
 print('val_rmse_5fold', np.mean(val_rmse))
+
 ```
 </div>
 
