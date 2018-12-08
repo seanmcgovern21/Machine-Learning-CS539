@@ -54,9 +54,11 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 
 <h3>Linear Regression </h3>
 
-<div class="ex1">
+
 	
 ```python
+
+<div class="ex1">
 
 from sklearn.metrics import mean_squared_error
 from sklearn.linear_model import LinearRegression
@@ -98,8 +100,10 @@ print('train_rmse_5fold', np.mean(train_rmse))
 print('val_mse_5fold', np.mean(val_mse))
 print('val_rmse_5fold', np.mean(val_rmse))
 
-```
 </div>
+
+```
+
 
 '<https://github.com/seanmcgovern21/Machine-Learning-CS539/blob/master/gg_analytics-RNN.ipynb>'
 
