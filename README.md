@@ -200,13 +200,8 @@ print('val_rmse_5fold', np.mean(val_rmse))
 </div>
 
 
-
-'<https://github.com/seanmcgovern21/Machine-Learning-CS539/blob/master/gg_analytics-RNN.ipynb>'
-
-
-<h3 align="left"> 
-Proposed Model - Pre-classified Regression
-</h3>
+<!---// Proposed Model Code //////////////////////////////////////////////////////////////////////////////--->
+<h2 align="left"> Proposed Model - Pre-classified Regression </h2>
 <p align="center">
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/Pre-classified%20Regression.png"  width="500" height="auto">
 </p>
