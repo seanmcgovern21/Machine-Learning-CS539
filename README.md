@@ -216,7 +216,7 @@ The first proposed idea is to apply a classification model before a linear regre
 <!---// Proposed Model Code //////////////////////////////////////////////////////////////////////////////--->
 <h3>Proposed Model Code</h3>
 
-<div style="height:210px;width:850px;overflow:auto;">
+<div style="height:410px;width:850px;overflow:auto;">
 <pre><code class="python">
 
 from sklearn.linear_model import LinearRegression
