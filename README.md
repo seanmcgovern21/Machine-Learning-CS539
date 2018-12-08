@@ -343,9 +343,12 @@ print('val_rmse_5fold', np.mean(val_rmse))
 <h2 align="left"> Proposed Model - Weighted Classified Subnetwork for Regressionv</h2>
 
 This system contains 2 parts: the main-network and the sub-network. We applied RNN model in the main-network and the goal is to predict generated revenue from customers. This predicted revenue is weighted by the output from sub-network which is the probability of customer spending. In order to get the probability of customer spending, we again applied RNN model but we added sigmoid function in the last layer of the sub-network. The total loss of this proposed method is the sum of log_loss in sub-network and MSE_loss in main-network.
+
+<p align="center">
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/Weighted%20Classified%20%20Subnetwork%20for%20Regression.png"  width="500" height="auto">
 
 ![Figure 2: Weighted Classified Subnetwork for Regression](https://github.com/seanmcgovern21/Machine-Learning-CS539/tree/master/Images/sub-network_classification.png)
+</p>
 
 Our proposed systems combine the knowledge from classification, which differentiate revenue and non-revenue generating customers, into the regression model. We believe this system will be more robust against skewed data. We first propose a simple straightforward system that runs a classifier before running the regression model i.e. Pre-classified Regression, and a more complex system that also handles sequential data i.e. Weighted Classified Subnetwork for Regression.
 Pre-classified Regression
