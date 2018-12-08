@@ -20,7 +20,7 @@ Business owners will obviously find this joint model useful to analyze customer 
 <h1 align="center"> Problem Statement and Challenge </h1>
 
 We would like to implement machine learning systems that accurately predicts customer generated revenue. 
-The dataset being used in very skewed. The data set also contains recursive data instances. 
+The dataset being used is very skewed. The dataset also contains recursive data instances. 
 
 
 <!---//   Training DATA   /////////////////////////////////////////////////////////////////////////////////////
@@ -214,7 +214,7 @@ The first proposed idea is to apply a classification model before a linear regre
 
 
 <!---// Proposed Model Code //////////////////////////////////////////////////////////////////////////////--->
-<h3>Visit Based Model Code in Python</h3>
+<h3>Pre-classified Regression Code in Python</h3>
 
 <div style="height:410px;width:850px;overflow:auto;">
 <pre><code class="python">
@@ -340,7 +340,11 @@ print('val_rmse_5fold', np.mean(val_rmse))
 <!---//Customer Based Model /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
 <h1 align="center">  Customer-based Model  </h1>
-<h2 align="left"> Proposed Model - Weighted Classified Subnetwork for Regressionv</h2>
+<h2> State of the Art </h2>
+
+Recurrent neural network (RNN)
+
+<h2 align="left"> Proposed Model - Weighted Classified Subnetwork for Regression</h2>
 
 This system contains 2 parts: the main-network and the sub-network. We applied RNN model in the main-network and the goal is to predict generated revenue from customers. This predicted revenue is weighted by the output from sub-network which is the probability of customer spending. In order to get the probability of customer spending, we again applied RNN model but we added sigmoid function in the last layer of the sub-network. The total loss of this proposed method is the sum of log_loss in sub-network and MSE_loss in main-network.
 
@@ -348,22 +352,9 @@ This system contains 2 parts: the main-network and the sub-network. We applied R
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/Weighted%20Classified%20%20Subnetwork%20for%20Regression.png"  width="500" height="auto">
 </p>
 
-<p align="center">
-![Figure 2: Weighted Classified Subnetwork for Regression](https://github.com/seanmcgovern21/Machine-Learning-CS539/tree/master/Images/sub-network_classification.png)
-</p>
-
-Our proposed systems combine the knowledge from classification, which differentiate revenue and non-revenue generating customers, into the regression model. We believe this system will be more robust against skewed data. We first propose a simple straightforward system that runs a classifier before running the regression model i.e. Pre-classified Regression, and a more complex system that also handles sequential data i.e. Weighted Classified Subnetwork for Regression.
-Pre-classified Regression
-The first proposed idea is to apply a classification model before a linear regression model. The classification model is used to predict whether or not a customer will generate revenue. If the revenue is predicted as non-zero, the sample will not enter our regression model. By doing this, the large number of zero-revenue samples will not impact the training process of the regression model. For classification, we plan to perform Logistic Regression, Decision Tree, KNN and Support Vector Machine on the training set separately and choose the algorithm with the best performance. For regression, we plan to apply the models we mentioned in the state-of-the-art section. The Pre-classified Regression will be implemented using Scikit-learn in Python.
-
-Figure 1: Pre-classified Regression
-Weighted Classified Subnetwork for Regression 
-The general idea of this system is shown in figure 2. Sequential information will be captured by implementing RNN in the main-network while the skewed target will be tackled by implementing logistic regression in the sub-network. The sub-network aims to separate revenue generating customers from non-revenue generating customers by computing the probability of spending of each customer. In the main-network, sequential information of customer visits is fed into the system and the revenue generated per customer (final predicted value) will be weighted by the output from sub-network. The system will be implemented using Pytorch in Python.
-
-Figure 2: Weighted Classified Subnetwork for Regression
 
 <!---// Customer Based Model Code //////////////////////////////////////////////////////////////////////////////--->
-<h3>Customer Based Model Code in Python</h3>
+<h3>Weighted Classified Subnetwork for Regression Code in Python</h3>
 <div style="height:410px;width:850px;overflow:auto;">
 <pre><code class="python">
 
@@ -849,16 +840,20 @@ print('val_rmse_5fold', np.mean(cv_val_rmse))
 </div>
 
 
-<!---//Results: Visit Based Model /////////////////////////////////////////////////////////////////////////////////////
+<!---//Evaluation /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
-<h1 align="center"> Results: Visit Based Model </h1>
-<h2 align="left"> Evaluation </h2>
+
+<h1 align="center"> Evaluation </h1>
 Performance of our proposed methods will be compared to the state-of-the-art methods using Root-Mean-Square Error (RMSE) which is defined as:
 <p align="center">
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/RMSE.png" width="500" height="300">
 </p>
-<h2 align="left"> Results</h2>
 
+
+
+<!---//Results: Visit Based Model /////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
+<h1 align="center"> Results: Visit-based Model </h1>
 For results of the visit based model, we show the rmse using 5 fold cross-validation. We use the rmse results from linear regression, polynomial regression and regression tree to compare our model results (these are shown in blue). We compare two variations of our model, one using random forest and one using decision tree, with each baseline. Our results, (shown in grey and orange) show there is a slight improvement to each baseline when using classification with each baseline. 
 
 <p align="center">
@@ -869,17 +864,7 @@ For results of the visit based model, we show the rmse using 5 fold cross-valida
 
 <!---//Results: Customer Based Model /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
-<h1 align="center"> Results: Customer Based Model </h1>
-
-<h2 align="left"> Evaluation </h2>
-
-Performance of our proposed methods will be compared to the state-of-the-art methods (section 4.2.) using Root-Mean-Square Error (RMSE) which is defined as
-RMSE = 1ni=1n(yi-yi)2
-where 	nis the number of customers, 
-yi=log(customer revenue+1),
-yi=log(predicted customer revenue+1).
-
-<h2 align="left"> Results </h2>
+<h1 align="center"> Results: Customer-based Model </h1>
 For the results of the customer based model, we also show the rmse using 5 fold cross validation. We compare our results to a Recurrent Neural Network baseline. The right graph shows the different hyperparameters used and their results. The hyperparameters for our proposed method that remembered up to 6 visits, 1 hidden or 2 hidden layers, and 6 hidden units showed the best results. With these hyperparameters, were able to provide a slight improvement to the baseline.  
 Based on the results, we can conclude combining classification and regression can improve the performance of visit based and customer based models with skewed data. 
 
