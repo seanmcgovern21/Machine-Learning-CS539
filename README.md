@@ -54,12 +54,14 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 
 <h3>Linear Regression </h3>
 
-<div id="wrapper">
-  <div class="scrollbar" id="style-default">
-  <div class="force-overflow">
-	  hhihihihihihi
-	  </div>
-   </div>
+<div style="height:120px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+	
+	sdfasd
+	asdfasdf
+	adsfasdfa
+	asdfasdf
+	asdfasdf
+	asdfasdf
 </div>
 	
 ```python
