@@ -65,7 +65,7 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 
 
 <div style="height:210px;width:850px;overflow:auto;">
-<pre class="brush: python"><code class="python">
+<pre class="brush: python"><code class="language-python">
    # python code here
 
 
