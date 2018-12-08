@@ -34,10 +34,10 @@ The dataset being used in very skewed. The data set also contains recursive data
 
 <!---//Visit Based Model /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
-<h2 align="center">  Visit-based Model   </h2>
+<h1 align="center">  Visit-based Model   </h1>
 
 
-<h3> State of the Art </h3>
+<h2> State of the Art </h2>
 
 Linear Regression is a classic state of the art algorithm for predicting real numerical target variables. However, linear regression will produce high bias, and not suitable for the dataset if the ground truth relationship in the dataset is non-linear. Polynomial  regression will solve these  issues, but may lead to overfitting. Decision Tree is also another usable state of the art algorithm for this task. Given that both categorical and numerical features are present in the dataset, the decision tree may be more suitable than Linear/Polynomial regression. Additionally, this algorithm also performs feature selection automatically. 
 
