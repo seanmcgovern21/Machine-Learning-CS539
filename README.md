@@ -18,13 +18,12 @@ Business owners will obviously find this joint model useful to analyze customer 
 <h2 align="center"> Problem Statement and Challenge </h2>
 
 We would like to implement machine learning systems that accurately predicts customer generated revenue. 
-
 The dataset being used in very skewed. The data set also contains recursive data instances. 
 
 
-<!---//DATA /////////////////////////////////////////////////////////////////////////////////////
+<!---//   Training DATA   /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
-<h2 align="center">  Data  </h2>
+<h2 align="center">  Training Data  </h2>
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/data_visit_based.png" width="500" height="auto" >
@@ -38,12 +37,9 @@ The dataset being used in very skewed. The data set also contains recursive data
 <h2 align="center">  Visit-based Model   </h2>
 
 
-<h2 align="center"> 
-State of the Art
-</h2>
+<h3> State of the Art </h2>
 
-Linear Regression is a classic state of the art algorithm for predicting real numerical target variables. However, linear regression will produce high bias, and not suitable for the dataset if the ground truth relationship in the dataset is non-linear. Polynomial  regression will solve these  issues, but may lead to overfitting.  
-	Decision Tree is also another usable state of the art algorithm for this task. Given that both categorical and numerical features are present in the dataset, the decision tree may be more suitable than Linear/Polynomial regression. Additionally, this algorithm also performs feature selection automatically. 
+Linear Regression is a classic state of the art algorithm for predicting real numerical target variables. However, linear regression will produce high bias, and not suitable for the dataset if the ground truth relationship in the dataset is non-linear. Polynomial  regression will solve these  issues, but may lead to overfitting. Decision Tree is also another usable state of the art algorithm for this task. Given that both categorical and numerical features are present in the dataset, the decision tree may be more suitable than Linear/Polynomial regression. Additionally, this algorithm also performs feature selection automatically. 
 
 ##Linear Regression
 
