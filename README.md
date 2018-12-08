@@ -244,13 +244,8 @@ Performance of our proposed methods will be compared to the state-of-the-art met
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/RMSE.png" width="500" height="auto">
 
 
-<h2 align="center"> 
-Results
-</h2>
+<h2 align="center"> Results </h2>
 
-<h3 align="left"> 
-Visit-based Model
-</h3>
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/result_visit_based/result_summary_visit-based.png" width="500" height="auto">
 
 
@@ -269,10 +264,8 @@ where 	nis the number of customers,
 yi=log(customer revenue+1),
 yi=log(predicted customer revenue+1).
 
+<h2 align="center"> Results </h2>
 
-<h3 align="left"> 
-Customer-based Model
-</h3>
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/result_customer_based/result_summary_customer-based.png" width="500" height="auto">
 
 
