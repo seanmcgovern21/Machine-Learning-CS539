@@ -55,6 +55,7 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 <h3>Linear Regression </h3>
 
 <div class="ex1">
+	
 ```python
 from sklearn.metrics import mean_squared_error
 from sklearn.linear_model import LinearRegression
