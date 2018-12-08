@@ -214,7 +214,7 @@ The first proposed idea is to apply a classification model before a linear regre
 
 
 <!---// Proposed Model Code //////////////////////////////////////////////////////////////////////////////--->
-<h3>Proposed Model Code</h3>
+<h3>Visit Based Model Code</h3>
 
 <div style="height:410px;width:850px;overflow:auto;">
 <pre><code class="python">
@@ -362,7 +362,7 @@ The general idea of this system is shown in figure 2. Sequential information wil
 Figure 2: Weighted Classified Subnetwork for Regression
 
 <!---// Customer Based Model Code //////////////////////////////////////////////////////////////////////////////--->
-
+<h3>Customer Based Model Code</h3>
 <div style="height:410px;width:850px;overflow:auto;">
 <pre><code class="python">
 
