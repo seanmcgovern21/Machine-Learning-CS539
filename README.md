@@ -345,10 +345,9 @@ print('val_rmse_5fold', np.mean(val_rmse))
 Recurrent neural network (RNN)
 
 <h2 align="left"> Proposed Model - Weighted Classified Subnetwork for Regressionv</h2>
+
 This system contains 2 parts: the main-network and the sub-network. We applied RNN model in the main-network and the goal is to predict generated revenue from customers. This predicted revenue is weighted by the output from sub-network which is the probability of customer spending. In order to get the probability of customer spending, we again applied RNN model but we added sigmoid function in the last layer of the sub-network. The total loss of this proposed method is the sum of log_loss in sub-network and MSE_loss in main-network.
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/Weighted%20Classified%20%20Subnetwork%20for%20Regression.png"  width="500" height="auto">
-
-<h2 align="center"> Proposed Method </h2>
 
 ![Figure 2: Weighted Classified Subnetwork for Regression](https://github.com/seanmcgovern21/Machine-Learning-CS539/tree/master/Images/sub-network_classification.png)
 
@@ -373,10 +372,9 @@ Figure 2: Weighted Classified Subnetwork for Regression
 Performance of our proposed methods will be compared to the state-of-the-art methods using Root-Mean-Square Error (RMSE) which is defined as
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/RMSE.png" width="500" height="auto">
 
-
 <h2 align="center"> Results </h2>
 
-<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/result_visit_based/result_summary_visit-based.png" width="500" height="auto">
+<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/result_visit_based/result_summary_visit-based.png" width="850" height="auto">
 
 
 
@@ -387,7 +385,6 @@ Performance of our proposed methods will be compared to the state-of-the-art met
 
 <h2 align="center"> Evaluation </h2>
 
-
 Performance of our proposed methods will be compared to the state-of-the-art methods (section 4.2.) using Root-Mean-Square Error (RMSE) which is defined as
 RMSE = 1ni=1n(yi-yi)2
 where 	nis the number of customers, 
@@ -396,7 +393,7 @@ yi=log(predicted customer revenue+1).
 
 <h2 align="center"> Results </h2>
 
-<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/result_customer_based/result_summary_customer-based.png" width="500" height="auto">
+<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/result_customer_based/result_summary_customer-based.png" width="850" height="auto">
 
 
 
