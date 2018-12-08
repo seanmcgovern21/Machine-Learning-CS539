@@ -854,7 +854,7 @@ print('val_rmse_5fold', np.mean(cv_val_rmse))
 <h2 align="left"> Evaluation </h2>
 Performance of our proposed methods will be compared to the state-of-the-art methods using Root-Mean-Square Error (RMSE) which is defined as:
 <p align="center">
-<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/RMSE.png" width="500" height="auto">
+<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/RMSE.png" width="500" height="300">
 </p>
 <h2 align="left"> Results</h2>
 
