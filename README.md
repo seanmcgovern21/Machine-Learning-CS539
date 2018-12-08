@@ -53,6 +53,14 @@ The dataset being used in very skewed. The data set also contains recursive data
 Linear Regression is a classic state of the art algorithm for predicting real numerical target variables. However, linear regression will produce high bias, and not suitable for the dataset if the ground truth relationship in the dataset is non-linear. Polynomial  regression will solve these  issues, but may lead to overfitting. Decision Tree is also another usable state of the art algorithm for this task. Given that both categorical and numerical features are present in the dataset, the decision tree may be more suitable than Linear/Polynomial regression. Additionally, this algorithm also performs feature selection automatically. 
 
 <h3>Linear Regression </h3>
+
+<div id="wrapper">
+  <div class="scrollbar" id="style-default">
+  <div class="force-overflow">
+	  hhihihihihihi
+	  </div>
+   </div>
+</div>
 	
 ```python
 
