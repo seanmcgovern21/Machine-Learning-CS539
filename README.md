@@ -45,7 +45,7 @@ The dataset is provided by Kaggle competition. There are 903,653 visiting record
 Linear Regression is a classic state of the art algorithm for predicting real numerical target variables. However, linear regression will produce high bias, and not suitable for the dataset if the ground truth relationship in the dataset is non-linear. Polynomial  regression will solve these  issues, but may lead to overfitting. Decision Tree is also another usable state of the art algorithm for this task. Given that both categorical and numerical features are present in the dataset, the decision tree may be more suitable than Linear/Polynomial regression. Additionally, this algorithm also performs feature selection automatically. 
 
 <!---//Linear Regression Code //////////////////////////////////////////////////////////////////////////////--->
-<h3>Linear Regression Code</h3>
+<h3>Linear Regression Code in Python</h3>
 
 <div style="height:210px;width:850px;overflow:auto;">
 <pre><code class="python">
@@ -96,7 +96,7 @@ print('val_rmse_5fold', np.mean(val_rmse))
 
 
 <!---//Polynomial Regression Code //////////////////////////////////////////////////////////////////////////////--->
-<h3>Polynomial Regression Code </h3>
+<h3>Polynomial Regression Code in Python</h3>
 
 
 <div style="height:210px;width:850px;overflow:auto;">
@@ -149,7 +149,7 @@ print('val_rmse_5fold', np.mean(val_rmse))
 </div>
 
 <!---//Regression Tree Code //////////////////////////////////////////////////////////////////////////////--->
-<h3>Regression Tree Code</h3>
+<h3>Regression Tree Code in Python</h3>
 
 
 <div style="height:210px;width:850px;overflow:auto;">
@@ -214,7 +214,7 @@ The first proposed idea is to apply a classification model before a linear regre
 
 
 <!---// Proposed Model Code //////////////////////////////////////////////////////////////////////////////--->
-<h3>Visit Based Model Code</h3>
+<h3>Visit Based Model Code in Python</h3>
 
 <div style="height:410px;width:850px;overflow:auto;">
 <pre><code class="python">
@@ -340,10 +340,6 @@ print('val_rmse_5fold', np.mean(val_rmse))
 <!---//Customer Based Model /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
 <h1 align="center">  Customer-based Model  </h1>
-
-<h2 align="left"> State of the Art </h2>
-Recurrent neural network (RNN)
-
 <h2 align="left"> Proposed Model - Weighted Classified Subnetwork for Regressionv</h2>
 
 This system contains 2 parts: the main-network and the sub-network. We applied RNN model in the main-network and the goal is to predict generated revenue from customers. This predicted revenue is weighted by the output from sub-network which is the probability of customer spending. In order to get the probability of customer spending, we again applied RNN model but we added sigmoid function in the last layer of the sub-network. The total loss of this proposed method is the sum of log_loss in sub-network and MSE_loss in main-network.
@@ -362,7 +358,7 @@ The general idea of this system is shown in figure 2. Sequential information wil
 Figure 2: Weighted Classified Subnetwork for Regression
 
 <!---// Customer Based Model Code //////////////////////////////////////////////////////////////////////////////--->
-<h3>Customer Based Model Code</h3>
+<h3>Customer Based Model Code in Python</h3>
 <div style="height:410px;width:850px;overflow:auto;">
 <pre><code class="python">
 
