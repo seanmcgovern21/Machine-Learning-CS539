@@ -5,7 +5,7 @@
 <!---//Motivation Paragraph  //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
 
-<h2 align="center">  Motivation </h2>
+<h1 align="center">  Motivation </h1>
 
 <p style="text-indent :5em;" > </p>The 'Google Analytics Customer Revenue Prediction'  is a Kaggle competition to predict the revenue generated per customer from data of the Google Merchandise Store (GStore). The data presents us with a skewed target variable, where only a small number of customer visits generate non-zero revenue. Some customers may also visit the GStore multiple times, which produces sequential data. State of the art algorithms such as linear regression and regression trees are insufficient for predicting skewed and sequential data. As such, we propose a joint classification-regression technique, which is more robust against skewed data. Recurrent Neural Networks (RNN) will be integrated into the proposed system to handle sequential data.
 Business owners will obviously find this joint model useful to analyze customer generated revenue. Furthermore, this model can be generalized to be used for any sequential data with skewed target variable. 
@@ -15,7 +15,7 @@ Business owners will obviously find this joint model useful to analyze customer 
 <!---//Problem Statement and Challenge Paragraph ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
 
-<h2 align="center"> Problem Statement and Challenge </h2>
+<h1 align="center"> Problem Statement and Challenge </h1>
 
 We would like to implement machine learning systems that accurately predicts customer generated revenue. 
 The dataset being used in very skewed. The data set also contains recursive data instances. 
@@ -23,7 +23,7 @@ The dataset being used in very skewed. The data set also contains recursive data
 
 <!---//   Training DATA   /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
-<h2 align="center">  Training Data  </h2>
+<h1 align="center">  Training Data  </h1>
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/data_visit_based.png" width="500" height="auto" >
@@ -43,7 +43,7 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 
 <h3>Linear Regression </h3>
 
-```python
+	```python
 from sklearn.metrics import mean_squared_error
 from sklearn.linear_model import LinearRegression
 train_mse = []
