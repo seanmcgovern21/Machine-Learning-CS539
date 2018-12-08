@@ -29,8 +29,9 @@ The dataset being used in very skewed. The data set also contains recursive data
 
 The dataset is provided by Kaggle competition. There are 903,653 visiting records with 55 features of visiting information, such as visitDate, visitorID and visitNumber. The records are from 2016-08-01 to 2017-08-01. A visitor corresponds to one or many visiting records, which produces sequential data. Among the useful 33 features, besides the 4 ID and 2 datetime features, there are 4 numerical features and 23 categorical features. The target variable is “totals.transactionRevenue”. It is noticeable that only 11,515 visiting records (<1.3%) of the dataset contains non-zero value.
 
-
-<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/AllData.png" width="425" height="auto" align="left" >
+<p align="center">
+<img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/AllData.png"  width="500" height="auto">
+</p>
 
 
 
