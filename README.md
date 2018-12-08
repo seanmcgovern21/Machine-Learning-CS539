@@ -64,6 +64,8 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 <h3>Polynomial Regression </h3>
 
 
+<div style="height:210px;width:850px;overflow:auto;">
+
 ```python
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import PolynomialFeatures
@@ -108,6 +110,8 @@ print('train_rmse_5fold', np.mean(train_rmse))
 print('val_mse_5fold', np.mean(val_mse))
 print('val_rmse_5fold', np.mean(val_rmse))
 ```
+</div>
+
 <h3>Regression Tree</h3>
 
 ```python
