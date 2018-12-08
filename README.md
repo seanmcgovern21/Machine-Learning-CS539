@@ -69,7 +69,7 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
    # python code here
 
 
-```python
+python
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import PolynomialFeatures
 
@@ -112,7 +112,7 @@ print('train_mse_5fold', np.mean(train_mse))
 print('train_rmse_5fold', np.mean(train_rmse))
 print('val_mse_5fold', np.mean(val_mse))
 print('val_rmse_5fold', np.mean(val_rmse))
-```
+
 
 </code></pre>
 </div>
