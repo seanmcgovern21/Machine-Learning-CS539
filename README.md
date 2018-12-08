@@ -110,7 +110,10 @@ print('val_rmse_5fold', np.mean(val_rmse))
 
 <h3>Regression Tree</h3>
 
-<script type="syntaxhighlighter" class="brush: python"><![CDATA[ from sklearn.tree import DecisionTreeRegressor
+
+<pre class="line-numbers"><code class="language-javascript">
+
+from sklearn.tree import DecisionTreeRegressor
 import matplotlib.pyplot as plt
 
 train_mse = []
@@ -150,11 +153,11 @@ print('\n\nAverage:')
 print('train_mse_5fold', np.mean(train_mse))
 print('train_rmse_5fold', np.mean(train_rmse))
 print('val_mse_5fold', np.mean(val_mse))
-print('val_rmse_5fold', np.mean(val_rmse))    ]]></script>
+print('val_rmse_5fold', np.mean(val_rmse))   
+
+</code></pre>
 
 
-
-```
 
 '<https://github.com/seanmcgovern21/Machine-Learning-CS539/blob/master/gg_analytics-RNN.ipynb>'
 
