@@ -1,11 +1,6 @@
-<style>
-div.ex1 {
-    background-color: rgb(240, 240, 240);
-    width: 1010px;
-    height: 210px;
-    overflow: scroll;
-}
-</style>
+<link rel="stylesheet" href="/path/to/styles/default.css">
+<script src="/path/to/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
 
 
@@ -64,8 +59,8 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 <h3>Polynomial Regression </h3>
 
 
-<div style="height:210px;width:850px;overflow:auto;"><div class="highlight-python">
-<pre><code class="language-python">
+<div style="height:210px;width:850px;overflow:auto;">
+<pre><code class="html">
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import PolynomialFeatures
 
@@ -111,7 +106,7 @@ print('val_rmse_5fold', np.mean(val_rmse))
 
 
 </code></pre>
-</div></div>
+</div>
 
 <h3>Regression Tree</h3>
 
