@@ -56,7 +56,7 @@ Linear Regression is a classic state of the art algorithm for predicting real nu
 </div>
 
 
-<h3>Polynomial Regression </h3>
+<h3>Polynomial Regression Code </h3>
 
 
 <div style="height:210px;width:850px;overflow:auto;">
