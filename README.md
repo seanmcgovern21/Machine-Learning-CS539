@@ -38,6 +38,7 @@ The dataset is provided by Kaggle competition. There are 903,653 visiting record
   <div class="column">
    <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/data_customer_based.png" width="425" height="auto">
   </div>
+</div>
 
 
 
