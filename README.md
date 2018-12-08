@@ -41,7 +41,50 @@ The dataset being used in very skewed. The data set also contains recursive data
 
 Linear Regression is a classic state of the art algorithm for predicting real numerical target variables. However, linear regression will produce high bias, and not suitable for the dataset if the ground truth relationship in the dataset is non-linear. Polynomial  regression will solve these  issues, but may lead to overfitting. Decision Tree is also another usable state of the art algorithm for this task. Given that both categorical and numerical features are present in the dataset, the decision tree may be more suitable than Linear/Polynomial regression. Additionally, this algorithm also performs feature selection automatically. 
 
-##Linear Regression
+<h3>Linear Regression </h3>
+'''python
+from sklearn.metrics import mean_squared_error
+from sklearn.linear_model import LinearRegression
+
+train_mse = []
+train_rmse = []
+val_mse = []
+val_rmse = []
+
+for i in range(fold):
+    print('\n\nfold:', i)
+    val = processed_train_df[processed_train_df['fullVisitorId'].isin(id_cv[i])]
+    train = processed_train_df[~processed_train_df['fullVisitorId'].isin(id_cv[i])]
+    x_tr = train.iloc[:,2:]
+    y_tr = train.iloc[:,1]
+    log_y_tr = np.log1p(y_tr)
+    x_val = val.iloc[:,2:]
+    y_val = val.iloc[:,1]
+    log_y_val = np.log1p(y_val)
+    
+    # --- INSERT YOUR MODEL -----
+    model = LinearRegression().fit(x_tr, log_y_tr)
+    log_y_tr_pred = model.predict(x_tr)
+    # ---------------------------
+    
+    log_y_tr_pred = [0 if i < 0 else i for i in log_y_tr_pred]
+    log_y_val_pred = model.predict(x_val)
+    log_y_val_pred = [0 if i < 0 else i for i in log_y_val_pred]
+    
+    mse_tr, mse_val = getMse(x_tr, train, val, log_y_tr_pred, log_y_val_pred)
+    train_mse.append(mse_tr)
+    train_rmse.append(np.sqrt(mse_tr))
+    val_mse.append(mse_val)
+    val_rmse.append(np.sqrt(mse_val))
+
+
+print('\n\nAverage:')
+print('train_mse_5fold', np.mean(train_mse))
+print('train_rmse_5fold', np.mean(train_rmse))
+print('val_mse_5fold', np.mean(val_mse))
+print('val_rmse_5fold', np.mean(val_rmse))
+'''
+
 
 '<https://github.com/seanmcgovern21/Machine-Learning-CS539/blob/master/gg_analytics-RNN.ipynb>'
 
