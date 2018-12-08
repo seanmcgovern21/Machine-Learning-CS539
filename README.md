@@ -1,8 +1,8 @@
 <style>
 div.ex1 {
-    background-color: lightblue;
-    width: 110px;
-    height: 110px;
+    background-color: grey;
+    width: 710px;
+    height: 210px;
     overflow: scroll;
 }
 </style>
