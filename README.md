@@ -346,7 +346,9 @@ This system contains 2 parts: the main-network and the sub-network. We applied R
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/seanmcgovern21/Machine-Learning-CS539/master/images/Weighted%20Classified%20%20Subnetwork%20for%20Regression.png"  width="500" height="auto">
+</p>
 
+<p align="center">
 ![Figure 2: Weighted Classified Subnetwork for Regression](https://github.com/seanmcgovern21/Machine-Learning-CS539/tree/master/Images/sub-network_classification.png)
 </p>
 
