@@ -3,7 +3,13 @@
 <p style="text-align: center;">   <b>Team Members </b></p>
 <p style="text-align: center;">   Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri </p>
 
-
+<div class = "tab" style="overflow: hidden;border: 1px solid #ccc;background-color: #f1f1f1;">
+	<button class = "tablinks active" id="defaultOpen">a</button>
+	<button class = "tablinks">b</button>
+	<button class = "tablinks">c</button>
+	<button class = "tablinks">d</button>
+	<button class = "tablinks">e</button>
+</div>
 <!---//Motivation Paragraph  //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
 
