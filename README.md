@@ -3,12 +3,14 @@
 <p style="text-align: center;">   <b>Team Members </b></p>
 <p style="text-align: center;">   Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri </p>
 
+[Headers](#headers)  
 <div class = "tab" style="overflow: hidden;border: 1px solid #ccc;background-color: #f1f1f1;">
-	<button class = "tablinks active" id="defaultOpen">a</button>
-	<button class = "tablinks">b</button>
-	<button class = "tablinks">c</button>
-	<button class = "tablinks">d</button>
-	<button class = "tablinks">e</button>
+	<button class = "tablinks active" id="defaultOpen">[Headers](#headers)</button>
+	<button class = "tablinks">Data</button>
+	<button class = "tablinks">Data</button>
+	<button class = "tablinks">Visit-Based Model</button>
+	<button class = "tablinks">Customer-Based Model</button>
+	<button class = "tablinks">Evaluation and Results</button>
 </div>
 <!---//Motivation Paragraph  //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
@@ -22,7 +24,7 @@ Business owners will obviously find this joint model useful to analyze customer 
 
 <!---//Problem Statement and Challenge Paragraph ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
-
+<a name="headers"/>
 <h1 align="center"> Problem Statement and Challenge </h1>
 
 We would like to implement machine learning systems that accurately predicts customer generated revenue. 
@@ -31,7 +33,7 @@ The dataset being used is very skewed. The dataset also contains recursive data 
 
 <!---//   Training DATA   /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
-<h1 align="center">  Training Data  </h1>
+<h1 align="center">  Data  </h1>
 
 The dataset is provided by Kaggle competition. There are 903,653 visiting records with 55 features of visiting information, such as visitDate, visitorID and visitNumber. The records are from 2016-08-01 to 2017-08-01. A visitor corresponds to one or many visiting records, which produces sequential data. Among the useful 33 features, besides the 4 ID and 2 datetime features, there are 4 numerical features and 23 categorical features. The target variable is “totals.transactionRevenue”. It is noticeable that only 11,515 visiting records (<1.3%) of the dataset contains non-zero value.
 
