@@ -4,12 +4,17 @@ a:link {
   background-color: transparent; 
   text-decoration: none;
 }
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
 </style>
 
 
 <p style="text-align: center;">   <b>Team Members </b></p>
 <p style="text-align: center;">   Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri </p>
-hu
+
 
 
 [Headers](#headers)  
@@ -20,7 +25,7 @@ hu
 	<button class = "tablinks"><A HREF="#Visit Model">Visit-based Model</A></button>
 	<button class = "tablinks"><A HREF="#Customer Model">Customer-based Model</A></button>
 	<button class = "tablinks"><A HREF="#Visit Results">Visit-based: Results</A></button>
-	<button class = "tablinks"><A HREF="#Customer Results">Customer-based Results</A></button>
+	<button class = "tablinks"><A HREF="#Customer Results">Customer-based: Results</A></button>
 </div>
 
 <!---//Motivation Paragraph  //////////////////////////////////////////////////////////////////////////////////
