@@ -275,6 +275,8 @@ for i in range(fold):
 	# ----- Insert Classification Model Here-----
 	
 	model = DecisionTreeClassifier(max_depth=8)
+	# model = RandomForestClassifier(n_estimators=150, max_depth=15)
+	# model = LogisticRegression(class_weight="balanced", solver='liblinear')
 	
 	# -------------------------------------------
     
@@ -309,6 +311,10 @@ for i in range(fold):
 	# ----- Insert Regression Model Here-----
 
 	model = DecisionTreeRegressor(max_depth=8).fit(x_tr1, log_y_tr1)
+	# model_pipeline = Pipeline([('poly',PolynomialFeatures(degree=2)),
+	#                            ('linear', LinearRegression(fit_intercept=False))])
+	# model = model_pipeline.fit(x_tr1, log_y_tr1)
+	# model = LinearRegression().fit(x_tr1, log_y_tr1)
 
 	# ---------------------------------------
 
