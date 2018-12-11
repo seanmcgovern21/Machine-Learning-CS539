@@ -15,7 +15,7 @@ a:visited {
 <p style="text-align: center;">   <b>Team Members </b></p>
 <p style="text-align: center;">   Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri </p>
 
-<div class = "tab" style="overflow: hidden; width:850px;align:center">
+<div class = "tab" style="overflow: hidden; width:850px;align:center;width:1050px;">
 	
 	<button class = "tablinks active" id="defaultOpen"><A HREF="#Problem">Problem Statement</A></button>
 	<button class = "tablinks"><A HREF="#Data">Data</A></button>
