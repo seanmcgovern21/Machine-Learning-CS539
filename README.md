@@ -16,9 +16,9 @@ a:visited {
 <p style="text-align: center;">   Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri </p>
 
 [Headers](#headers)  
-<div class = "tab" style="overflow: hidden;border: 0px solid #ccc; width:850px;align:center">
+<div class = "tab" style="overflow: hidden; width:850px;align:center">
 	
-	<button class = "tablinks active" id="defaultOpen"><A HREF="#Problem">Problem Statement</A></button>
+	<button class = "tablinks active" id="defaultOpen"><A HREF="#Problem"><font size=1>Problem Statement</font></A></button>
 	<button class = "tablinks"><A HREF="#Data">Data</A></button>
 	<button class = "tablinks"><A HREF="#Visit Model">Visit-based Model</A></button>
 	<button class = "tablinks"><A HREF="#Customer Model">Customer-based Model</A></button>
