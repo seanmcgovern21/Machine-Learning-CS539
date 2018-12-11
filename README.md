@@ -5,8 +5,8 @@
 
 [Headers](#headers)  
 <div class = "tab" style="overflow: hidden;border: 1px solid #ccc;background-color: #f1f1f1;">
-	<A HREF="#codeword">test</A>
-	<button class = "tablinks active" id="defaultOpen">[Headers](#headers)</button>
+	
+	<button class = "tablinks active" id="defaultOpen"><A HREF="#codeword">test</A></button>
 	<button class = "tablinks">Data</button>
 	<button class = "tablinks">Data</button>
 	<button class = "tablinks">Visit-Based Model</button>
