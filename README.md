@@ -67,30 +67,31 @@ val_mse = []
 val_rmse = []
 
 for i in range(fold):
-    print('\n\nfold:', i)
-    val = processed_train_df[processed_train_df['fullVisitorId'].isin(id_cv[i])]
-    train = processed_train_df[~processed_train_df['fullVisitorId'].isin(id_cv[i])]
-    x_tr = train.iloc[:,2:]
-    y_tr = train.iloc[:,1]
-    log_y_tr = np.log1p(y_tr)
-    x_val = val.iloc[:,2:]
-    y_val = val.iloc[:,1]
-    log_y_val = np.log1p(y_val)
+
+	print('\n\nfold:', i)
+	val = processed_train_df[processed_train_df['fullVisitorId'].isin(id_cv[i])]
+	train = processed_train_df[~processed_train_df['fullVisitorId'].isin(id_cv[i])]
+	x_tr = train.iloc[:,2:]
+	y_tr = train.iloc[:,1]
+	log_y_tr = np.log1p(y_tr)
+	x_val = val.iloc[:,2:]
+	y_val = val.iloc[:,1]
+	log_y_val = np.log1p(y_val)
     
-    # --- INSERT YOUR MODEL -----
-    model = LinearRegression().fit(x_tr, log_y_tr)
-    log_y_tr_pred = model.predict(x_tr)
-    # ---------------------------
-    
-    log_y_tr_pred = [0 if i < 0 else i for i in log_y_tr_pred]
-    log_y_val_pred = model.predict(x_val)
-    log_y_val_pred = [0 if i < 0 else i for i in log_y_val_pred]
-    
-    mse_tr, mse_val = getMse(x_tr, train, val, log_y_tr_pred, log_y_val_pred)
-    train_mse.append(mse_tr)
-    train_rmse.append(np.sqrt(mse_tr))
-    val_mse.append(mse_val)
-    val_rmse.append(np.sqrt(mse_val))
+	# --- INSERT YOUR MODEL -----
+	model = LinearRegression().fit(x_tr, log_y_tr)
+	log_y_tr_pred = model.predict(x_tr)
+	# ---------------------------
+
+	log_y_tr_pred = [0 if i < 0 else i for i in log_y_tr_pred]
+	log_y_val_pred = model.predict(x_val)
+	log_y_val_pred = [0 if i < 0 else i for i in log_y_val_pred]
+
+	mse_tr, mse_val = getMse(x_tr, train, val, log_y_tr_pred, log_y_val_pred)
+	train_mse.append(mse_tr)
+	train_rmse.append(np.sqrt(mse_tr))
+	val_mse.append(mse_val)
+	val_rmse.append(np.sqrt(mse_val))
 
 
 print('\n\nAverage:')
@@ -118,32 +119,33 @@ val_mse = []
 val_rmse = []
 
 for i in range(fold):
-    print('\n\nfold:', i)
-    val = processed_train_df[processed_train_df['fullVisitorId'].isin(id_cv[i])]
-    train = processed_train_df[~processed_train_df['fullVisitorId'].isin(id_cv[i])]
-    x_tr = train.iloc[:,2:]
-    y_tr = train.iloc[:,1]
-    log_y_tr = np.log1p(y_tr)
-    x_val = val.iloc[:,2:]
-    y_val = val.iloc[:,1]
-    log_y_val = np.log1p(y_val)
+	
+	print('\n\nfold:', i)
+	val = processed_train_df[processed_train_df['fullVisitorId'].isin(id_cv[i])]
+	train = processed_train_df[~processed_train_df['fullVisitorId'].isin(id_cv[i])]
+	x_tr = train.iloc[:,2:]
+	y_tr = train.iloc[:,1]
+	log_y_tr = np.log1p(y_tr)
+	x_val = val.iloc[:,2:]
+	y_val = val.iloc[:,1]
+	log_y_val = np.log1p(y_val)
     
-    # --- INSERT YOUR MODEL -----
-    model_pipeline = Pipeline([('poly',PolynomialFeatures(degree=2)),
-                  ('linear', LinearRegression(fit_intercept=False))])
-    model = model_pipeline.fit(x_tr, log_y_tr)
-    log_y_tr_pred = model.predict(x_tr)
-    # ---------------------------
-    
-    log_y_tr_pred = [0 if i < 0 else i for i in log_y_tr_pred]
-    log_y_val_pred = model.predict(x_val)
-    log_y_val_pred = [0 if i < 0 else i for i in log_y_val_pred]
-    
-    mse_tr, mse_val = getMse(x_tr, train, val, log_y_tr_pred, log_y_val_pred)
-    train_mse.append(mse_tr)
-    train_rmse.append(np.sqrt(mse_tr))
-    val_mse.append(mse_val)
-    val_rmse.append(np.sqrt(mse_val))
+	# --- INSERT YOUR MODEL -----
+	model_pipeline = Pipeline([('poly',PolynomialFeatures(degree=2)),
+		  ('linear', LinearRegression(fit_intercept=False))])
+	model = model_pipeline.fit(x_tr, log_y_tr)
+	log_y_tr_pred = model.predict(x_tr)
+	# ---------------------------
+
+	log_y_tr_pred = [0 if i < 0 else i for i in log_y_tr_pred]
+	log_y_val_pred = model.predict(x_val)
+	log_y_val_pred = [0 if i < 0 else i for i in log_y_val_pred]
+
+	mse_tr, mse_val = getMse(x_tr, train, val, log_y_tr_pred, log_y_val_pred)
+	train_mse.append(mse_tr)
+	train_rmse.append(np.sqrt(mse_tr))
+	val_mse.append(mse_val)
+	val_rmse.append(np.sqrt(mse_val))
 
 
 print('\n\nAverage:')
@@ -172,31 +174,32 @@ val_mse = []
 val_rmse = []
 
 for i in range(fold):
-    print('\n\nfold:', i)
-    val = processed_train_df[processed_train_df['fullVisitorId'].isin(id_cv[i])]
-    train = processed_train_df[~processed_train_df['fullVisitorId'].isin(id_cv[i])]
-    x_tr = train.iloc[:,2:]
-    y_tr = train.iloc[:,1]
-    log_y_tr = np.log1p(y_tr)
-    x_val = val.iloc[:,2:]
-    y_val = val.iloc[:,1]
-    log_y_val = np.log1p(y_val)
+	
+	print('\n\nfold:', i)
+	val = processed_train_df[processed_train_df['fullVisitorId'].isin(id_cv[i])]
+	train = processed_train_df[~processed_train_df['fullVisitorId'].isin(id_cv[i])]
+	x_tr = train.iloc[:,2:]
+	y_tr = train.iloc[:,1]
+	log_y_tr = np.log1p(y_tr)
+	x_val = val.iloc[:,2:]
+	y_val = val.iloc[:,1]
+	log_y_val = np.log1p(y_val)
     
-    # --- INSERT YOUR MODEL -----
-    model = DecisionTreeRegressor(max_depth=10)
-    model.fit(x_tr, log_y_tr)
-    log_y_tr_pred = model.predict(x_tr)
-    # ---------------------------
-    
-    log_y_tr_pred = [0 if i < 0 else i for i in log_y_tr_pred]
-    log_y_val_pred = model.predict(x_val)
-    log_y_val_pred = [0 if i < 0 else i for i in log_y_val_pred]
-    
-    mse_tr, mse_val = getMse(x_tr, train, val, log_y_tr_pred, log_y_val_pred)
-    train_mse.append(mse_tr)
-    train_rmse.append(np.sqrt(mse_tr))
-    val_mse.append(mse_val)
-    val_rmse.append(np.sqrt(mse_val))
+	# --- INSERT YOUR MODEL -----
+	model = DecisionTreeRegressor(max_depth=10)
+	model.fit(x_tr, log_y_tr)
+	log_y_tr_pred = model.predict(x_tr)
+	# ---------------------------
+
+	log_y_tr_pred = [0 if i < 0 else i for i in log_y_tr_pred]
+	log_y_val_pred = model.predict(x_val)
+	log_y_val_pred = [0 if i < 0 else i for i in log_y_val_pred]
+
+	mse_tr, mse_val = getMse(x_tr, train, val, log_y_tr_pred, log_y_val_pred)
+	train_mse.append(mse_tr)
+	train_rmse.append(np.sqrt(mse_tr))
+	val_mse.append(mse_val)
+	val_rmse.append(np.sqrt(mse_val))
 
 
 print('\n\nAverage:')
@@ -242,7 +245,6 @@ val_mse = []
 val_rmse = []
 feature_list = [k for k in list(processed_train_df) if k not in ['fullVisitorId', 'totals.transactionRevenue', 'clf_label']]
 
-# cross validation
 for i in range(fold):
 
 	print('\n\nfold:', i)
