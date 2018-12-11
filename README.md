@@ -17,7 +17,7 @@ hi
 <p style="text-align: center;">   Bhon Bunnag, Sean McGovern, Ying Fang, Mengdi Li, Jidapa Thadajarassiri </p>
 
 [Headers](#headers)  
-<div class = "tab" style="overflow: hidden;border: 1px solid #ccc;background-color: #f1f1f1; width:850px;align="center";">
+<div class = "tab" style="overflow: hidden;border: 1px solid #ccc;background-color: #f1f1f1; width:850px;">
 	
 	<button class = "tablinks active" id="defaultOpen"><A HREF="#Problem">Problem Statement</A></button>
 	<button class = "tablinks"><A HREF="#Data">Data</A></button>
