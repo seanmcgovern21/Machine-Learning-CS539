@@ -242,98 +242,99 @@ val_mse = []
 val_rmse = []
 feature_list = [k for k in list(processed_train_df) if k not in ['fullVisitorId', 'totals.transactionRevenue', 'clf_label']]
 
+# cross validation
 for i in range(fold):
-    print('\n\nfold:', i)
-    val = processed_train_df[processed_train_df['fullVisitorId'].isin(id_cv[i])]
-    train = processed_train_df[~processed_train_df['fullVisitorId'].isin(id_cv[i])]
-    
-    x_val = val[feature_list]
-    y_clf_val = val['clf_label']
-    y_val = val.iloc[:,1]
-    log_y_val = np.log1p(y_val)
-    
-    nonzero_sample = train.loc[train[train['totals.transactionRevenue'] != 0.0].index]
-    zero_indices = train[train['totals.transactionRevenue'] == 0.0].index
-    random_indices = np.random.choice(zero_indices, nonzero_sample.shape[0], replace=False)
-    zero_sample = train.loc[random_indices]
-    undersampled_train_df = pd.concat([nonzero_sample, zero_sample])
 
-    x_tr = undersampled_train_df[feature_list]
-    y_clf_tr = undersampled_train_df['clf_label']
-    y_tr = undersampled_train_df.iloc[:,1]
-    log_y_tr = np.log1p(y_tr)
-    
-    nonzero_index_tr = []
-    nonzero_index_val = []
-    
-    # ----- Insert Classification Model Here-----
-    model = DecisionTreeClassifier(max_depth=8)
-#     model = RandomForestClassifier(n_estimators=150, max_depth=15)
-#     model = LogisticRegression(class_weight="balanced", solver='liblinear')
-    # -------------------------------------------
-    
-    model.fit(x_tr, y_clf_tr)   
-    y_clf_tr_pred = model.predict(x_tr)
-    y_clf_val_pred = model.predict(x_val)
-    
-    for m in range(len(y_clf_tr_pred)):
-        if y_clf_tr_pred[m] == 0:
-            continue
-        else:
-            nonzero_index_tr.append(m)
-    
-    x_regr_tr = x_tr.iloc[nonzero_index_tr]
-    y_regr_tr = undersampled_train_df.iloc[nonzero_index_tr,1]
-    log_y_tr = np.log1p(y_regr_tr)
-    
-    for j in range(len(y_clf_val_pred)):
-        if y_clf_val_pred[j] == 0:
-            continue
-        else:
-            nonzero_index_val.append(j)
-    
-    x_regr_val = x_val.iloc[nonzero_index_val,]
-    y_regr_val = val.iloc[nonzero_index_val,1]
-    log_y_val = np.log1p(y_regr_val)
-    
-    x_tr1 = train[feature_list]
-    y_tr1 = train.iloc[:,1]
-    log_y_tr1 = np.log1p(y_tr1)
-    
-    # ----- Insert Regression Model Here-----
-    model = DecisionTreeRegressor(max_depth=8).fit(x_tr1, log_y_tr1)
-#     model_pipeline = Pipeline([('poly',PolynomialFeatures(degree=2)),
-#                   ('linear', LinearRegression(fit_intercept=False))])
-#     model = model_pipeline.fit(x_tr1, log_y_tr1)
-#     model = LinearRegression().fit(x_tr1, log_y_tr1)
-    # ---------------------------------------
+	print('\n\nfold:', i)
+    	val = processed_train_df[processed_train_df['fullVisitorId'].isin(id_cv[i])]
+    	train = processed_train_df[~processed_train_df['fullVisitorId'].isin(id_cv[i])]
+    	x_val = val[feature_list]
+    	y_clf_val = val['clf_label']
+    	y_val = val.iloc[:,1]
+    	log_y_val = np.log1p(y_val)
+	
+	# undersampling for clf training
+	nonzero_sample = train.loc[train[train['totals.transactionRevenue'] != 0.0].index]
+	zero_indices = train[train['totals.transactionRevenue'] == 0.0].index
+	random_indices = np.random.choice(zero_indices, nonzero_sample.shape[0], replace=False)
+	zero_sample = train.loc[random_indices]
+	undersampled_train_df = pd.concat([nonzero_sample, zero_sample])
+	
+	# split undersampled data
+	x_tr = undersampled_train_df[feature_list]
+	y_clf_tr = undersampled_train_df['clf_label']
+	y_tr = undersampled_train_df.iloc[:,1]
+	log_y_tr = np.log1p(y_tr)
+	
+	# create index for splitting nonzero and zero for regression
+	nonzero_index_tr = []
+	nonzero_index_val = []
 
-    log_y_tr_pred = model.predict(x_regr_tr)
-    tr_pred = list(0 for i in range(len(x_tr)))
-    num = 0
-    for index in nonzero_index_tr:
-        tr_pred[index] = log_y_tr_pred[num]
-        num += 1
-    tr_pred = [0 if i < 0 else i for i in tr_pred]
+	# ----- Insert Classification Model Here-----
+	
+	model = DecisionTreeClassifier(max_depth=8)
+	
+	# -------------------------------------------
     
-    log_y_val_pred = model.predict(x_regr_val)
-    val_pred = list(0 for i in range(len(x_val)))
-    num = 0
-    for index in nonzero_index_val:
-        val_pred[index] = log_y_val_pred[num]
-        num += 1
-    val_pred = [0 if i < 0 else i for i in val_pred]
-    
-    mse_tr, mse_val = getMse(x_tr, undersampled_train_df, val, tr_pred, val_pred)
-    train_mse.append(mse_tr)
-    train_rmse.append(np.sqrt(mse_tr))
-    val_mse.append(mse_val)
-    val_rmse.append(np.sqrt(mse_val))
+	model.fit(x_tr, y_clf_tr)   
+	y_clf_tr_pred = model.predict(x_tr)
+	y_clf_val_pred = model.predict(x_val)
 
+	for m in range(len(y_clf_tr_pred)):
+		if y_clf_tr_pred[m] == 0:
+		    continue
+		else:
+		    nonzero_index_tr.append(m)
+
+	x_regr_tr = x_tr.iloc[nonzero_index_tr]
+	y_regr_tr = undersampled_train_df.iloc[nonzero_index_tr,1]
+	log_y_tr = np.log1p(y_regr_tr)
+
+	for j in range(len(y_clf_val_pred)):
+		if y_clf_val_pred[j] == 0:
+		    continue
+		else:
+		    nonzero_index_val.append(j)
+
+	x_regr_val = x_val.iloc[nonzero_index_val,]
+	y_regr_val = val.iloc[nonzero_index_val,1]
+	log_y_val = np.log1p(y_regr_val)
+
+	x_tr1 = train[feature_list]
+	y_tr1 = train.iloc[:,1]
+	log_y_tr1 = np.log1p(y_tr1)
+
+	# ----- Insert Regression Model Here-----
+
+	model = DecisionTreeRegressor(max_depth=8).fit(x_tr1, log_y_tr1)
+
+	# ---------------------------------------
+
+	log_y_tr_pred = model.predict(x_regr_tr)
+	tr_pred = list(0 for i in range(len(x_tr)))
+	num = 0
+
+	for index in nonzero_index_tr:
+		tr_pred[index] = log_y_tr_pred[num]
+		num += 1
+		tr_pred = [0 if i < 0 else i for i in tr_pred]
+
+	log_y_val_pred = model.predict(x_regr_val)
+	val_pred = list(0 for i in range(len(x_val)))
+	num = 0
+	
+	for index in nonzero_index_val:
+		val_pred[index] = log_y_val_pred[num]
+		num += 1
+		val_pred = [0 if i < 0 else i for i in val_pred]
+
+	mse_tr, mse_val = getMse(x_tr, undersampled_train_df, val, tr_pred, val_pred)
+	train_mse.append(mse_tr)
+	train_rmse.append(np.sqrt(mse_tr))
+	val_mse.append(mse_val)
+	val_rmse.append(np.sqrt(mse_val))
 
 print('\n\nAverage:')
-# print('train_mse_5fold', np.mean(train_mse))
-# print('train_rmse_5fold', np.mean(train_rmse))
 print('val_mse_5fold', np.mean(val_mse))
 print('val_rmse_5fold', np.mean(val_rmse))
 
