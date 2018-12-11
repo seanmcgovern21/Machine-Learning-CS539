@@ -3,7 +3,7 @@ a:link {
   color: black; 
   background-color: transparent; 
   text-decoration: none;
-  size="2"
+  size="1"
 }
 a:visited {
   color: black;
