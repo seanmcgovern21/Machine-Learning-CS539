@@ -24,8 +24,8 @@ a:visited {
 	<button class = "tablinks"><A HREF="#Data">Data</A></button>
 	<button class = "tablinks"><A HREF="#Visit Model">Visit-based Model</A></button>
 	<button class = "tablinks"><A HREF="#Customer Model">Customer-based Model</A></button>
-	<button class = "tablinks"><A HREF="#Visit Results">Visit-based: Results</A></button>
-	<button class = "tablinks"><A HREF="#Customer Results">Customer-based: Results</A></button>
+	<button class = "tablinks"><A HREF="#Visit Results">Results:Visit-based</A></button>
+	<button class = "tablinks"><A HREF="#Customer Results">Results:Customer-based </A></button>
 </div>
 
 <!---//Motivation Paragraph  //////////////////////////////////////////////////////////////////////////////////
