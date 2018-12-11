@@ -248,12 +248,12 @@ feature_list = [k for k in list(processed_train_df) if k not in ['fullVisitorId'
 for i in range(fold):
 
 	print('\n\nfold:', i)
-    	val = processed_train_df[processed_train_df['fullVisitorId'].isin(id_cv[i])]
-    	train = processed_train_df[~processed_train_df['fullVisitorId'].isin(id_cv[i])]
-    	x_val = val[feature_list]
-    	y_clf_val = val['clf_label']
-    	y_val = val.iloc[:,1]
-    	log_y_val = np.log1p(y_val)
+	val = processed_train_df[processed_train_df['fullVisitorId'].isin(id_cv[i])]
+	train = processed_train_df[~processed_train_df['fullVisitorId'].isin(id_cv[i])]
+	x_val = val[feature_list]
+	y_clf_val = val['clf_label']
+	y_val = val.iloc[:,1]
+	log_y_val = np.log1p(y_val)
 	
 	# undersampling for clf training
 	nonzero_sample = train.loc[train[train['totals.transactionRevenue'] != 0.0].index]
