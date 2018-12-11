@@ -5,6 +5,7 @@
 
 [Headers](#headers)  
 <div class = "tab" style="overflow: hidden;border: 1px solid #ccc;background-color: #f1f1f1;">
+	<A HREF="#codeword">test</A>
 	<button class = "tablinks active" id="defaultOpen">[Headers](#headers)</button>
 	<button class = "tablinks">Data</button>
 	<button class = "tablinks">Data</button>
@@ -33,6 +34,7 @@ The dataset being used is very skewed. The dataset also contains recursive data 
 
 <!---//   Training DATA   /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
+<A NAME="codeword">
 <h1 align="center">  Data  </h1>
 
 The dataset is provided by Kaggle competition. There are 903,653 visiting records with 55 features of visiting information, such as visitDate, visitorID and visitNumber. The records are from 2016-08-01 to 2017-08-01. A visitor corresponds to one or many visiting records, which produces sequential data. Among the useful 33 features, besides the 4 ID and 2 datetime features, there are 4 numerical features and 23 categorical features. The target variable is “totals.transactionRevenue”. It is noticeable that only 11,515 visiting records (<1.3%) of the dataset contains non-zero value.
