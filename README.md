@@ -901,12 +901,12 @@ Reference
 </h2>
 <p>
 Competition Website: https://www.kaggle.com/c/ga-customer-revenue-prediction/ 
-[1] Li, Yanghao et al. “Online Human Action Detection using Joint Classification-Regression Recurrent Neural Networks.” ECCV (2016). https://arxiv.org/abs/1604.05633
-[2] Lathuilière, Stéphane et al. “A Comprehensive Analysis of Deep Regression.” CoRR abs/1803.08450 (2018): n. pag. https://arxiv.org/pdf/1803.08450.pdf 
+1. Li, Yanghao et al. “Online Human Action Detection using Joint Classification-Regression Recurrent Neural Networks.” ECCV (2016). https://arxiv.org/abs/1604.05633
+2. Lathuilière, Stéphane et al. “A Comprehensive Analysis of Deep Regression.” CoRR abs/1803.08450 (2018): n. pag. https://arxiv.org/pdf/1803.08450.pdf 
 
-[3] Cooper, Robin, et al. "Profit priorities from activity-based costing." Harvard business review 69.3 (1991): 130-135.
+3. Cooper, Robin, et al. "Profit priorities from activity-based costing." Harvard business review 69.3 (1991): 130-135.
 
-[4] Flach, Peter. (2012). Machine Learning The Art and Science of Algorithms that Make Sense of Data. Cambridge, United Kingdom: Cambridge University Press. 
+4. Flach, Peter. (2012). Machine Learning The Art and Science of Algorithms that Make Sense of Data. Cambridge, United Kingdom: Cambridge University Press. 
 </p>
 
 
