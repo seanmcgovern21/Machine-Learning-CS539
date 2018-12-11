@@ -6,12 +6,12 @@
 [Headers](#headers)  
 <div class = "tab" style="overflow: hidden;border: 1px solid #ccc;background-color: #f1f1f1;">
 	
-	<button class = "tablinks active" id="defaultOpen"><A HREF="#codeword">test</A></button>
-	<button class = "tablinks">Data</button>
-	<button class = "tablinks">Data</button>
-	<button class = "tablinks">Visit-Based Model</button>
-	<button class = "tablinks">Customer-Based Model</button>
-	<button class = "tablinks">Evaluation and Results</button>
+	<button class = "tablinks active" id="defaultOpen"><A HREF="#Problem">Problem Statement</A></button>
+	<button class = "tablinks"><A HREF="#Data">Data</A></button>
+	<button class = "tablinks"><A HREF="#Visit Model">Visit-based Model</A></button>
+	<button class = "tablinks"><A HREF="#Customer Model">Customer-based Model</A></button>
+	<button class = "tablinks"><A HREF="#Visit Results">Visit-based: Results</A></button>
+	<button class = "tablinks"><A HREF="#Customer Results">Customer-based Results</A></button>
 </div>
 <!---//Motivation Paragraph  //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
@@ -25,6 +25,7 @@ Business owners will obviously find this joint model useful to analyze customer 
 
 <!---//Problem Statement and Challenge Paragraph ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
+<A NAME="Problem">
 <a name="headers"/>
 <h1 align="center"> Problem Statement and Challenge </h1>
 
@@ -34,7 +35,7 @@ The dataset being used is very skewed. The dataset also contains recursive data 
 
 <!---//   Training DATA   /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
-<A NAME="codeword">
+<A NAME="Data">
 <h1 align="center">  Data  </h1>
 
 The dataset is provided by Kaggle competition. There are 903,653 visiting records with 55 features of visiting information, such as visitDate, visitorID and visitNumber. The records are from 2016-08-01 to 2017-08-01. A visitor corresponds to one or many visiting records, which produces sequential data. Among the useful 33 features, besides the 4 ID and 2 datetime features, there are 4 numerical features and 23 categorical features. The target variable is “totals.transactionRevenue”. It is noticeable that only 11,515 visiting records (<1.3%) of the dataset contains non-zero value.
@@ -47,6 +48,7 @@ The dataset is provided by Kaggle competition. There are 903,653 visiting record
 
 <!---//Visit Based Model /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
+<A NAME="Visit Model">
 <h1 align="center">  Visit-based Model   </h1>
 
 
@@ -358,6 +360,7 @@ print('val_rmse_5fold', np.mean(val_rmse))
 
 <!---//Customer Based Model /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
+<A NAME="Customer Model">
 <h1 align="center">  Customer-based Model  </h1>
 <h2> State of the Art </h2>
 
@@ -872,6 +875,7 @@ Performance of our proposed methods will be compared to the state-of-the-art met
 
 <!---//Results: Visit Based Model /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
+<A NAME="Visit Results">
 <h1 align="center"> Results: Visit-based Model </h1>
 For results of the visit based model, we show the rmse using 5 fold cross-validation. We use the rmse results from linear regression, polynomial regression and regression tree to compare our model results (these are shown in blue). We compare two variations of our model, one using random forest and one using decision tree, with each baseline. Our results, (shown in grey and orange) show there is a slight improvement to each baseline when using classification with each baseline. 
 
@@ -883,6 +887,7 @@ For results of the visit based model, we show the rmse using 5 fold cross-valida
 
 <!---//Results: Customer Based Model /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--->
+<A NAME="Customer Results">
 <h1 align="center"> Results: Customer-based Model </h1>
 For the results of the customer based model, we also show the rmse using 5 fold cross validation. We compare our results to a Recurrent Neural Network baseline. The right graph shows the different hyperparameters used and their results. The hyperparameters for our proposed method that remembered up to 6 visits, 1 hidden or 2 hidden layers, and 6 hidden units showed the best results. With these hyperparameters, were able to provide a slight improvement to the baseline.  
 Based on the results, we can conclude combining classification and regression can improve the performance of visit based and customer based models with skewed data. 
